@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B1763A061965CA9B00D85DDC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1763A051965CA9B00D85DDC /* main.swift */; };
+		B1654416196E8C54004836B2 /* Math_Methods_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1654415196E8C54004836B2 /* Math_Methods_Tests.swift */; };
+		B1763A171965CC0200D85DDC /* Project_Euler_Test_1-10.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1763A161965CC0200D85DDC /* Project_Euler_Test_1-10.swift */; };
+		B1763A1D1965CC4200D85DDC /* MathMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1763A1C1965CC4200D85DDC /* MathMethods.swift */; };
+		B18C4E4619718BCA00D40F7A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18C4E4519718BCA00D40F7A /* main.swift */; };
+		B1B5E4BA1965FF0E0099D851 /* MathMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1763A1C1965CC4200D85DDC /* MathMethods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,12 +27,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B1654415196E8C54004836B2 /* Math_Methods_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math_Methods_Tests.swift; sourceTree = "<group>"; };
 		B1763A021965CA9B00D85DDC /* Project euler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Project euler"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1763A051965CA9B00D85DDC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B1763A121965CC0200D85DDC /* Project Euler Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project Euler Test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1763A151965CC0200D85DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1763A161965CC0200D85DDC /* Project_Euler_Test_1-10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project_Euler_Test_1-10.swift"; sourceTree = "<group>"; };
+		B1763A1C1965CC4200D85DDC /* MathMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathMethods.swift; sourceTree = "<group>"; };
+		B18C4E4519718BCA00D40F7A /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B17639FF1965CA9B00D85DDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1763A0F1965CC0200D85DDC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				B1763A041965CA9B00D85DDC /* Project euler */,
+				B1763A131965CC0200D85DDC /* Project Euler Test */,
 				B1763A031965CA9B00D85DDC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				B1763A021965CA9B00D85DDC /* Project euler */,
+				B1763A121965CC0200D85DDC /* Project Euler Test.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,9 +75,28 @@
 		B1763A041965CA9B00D85DDC /* Project euler */ = {
 			isa = PBXGroup;
 			children = (
-				B1763A051965CA9B00D85DDC /* main.swift */,
+				B18C4E4519718BCA00D40F7A /* main.swift */,
+				B1763A1C1965CC4200D85DDC /* MathMethods.swift */,
 			);
 			path = "Project euler";
+			sourceTree = "<group>";
+		};
+		B1763A131965CC0200D85DDC /* Project Euler Test */ = {
+			isa = PBXGroup;
+			children = (
+				B1763A161965CC0200D85DDC /* Project_Euler_Test_1-10.swift */,
+				B1654415196E8C54004836B2 /* Math_Methods_Tests.swift */,
+				B1763A141965CC0200D85DDC /* Supporting Files */,
+			);
+			path = "Project Euler Test";
+			sourceTree = "<group>";
+		};
+		B1763A141965CC0200D85DDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1763A151965CC0200D85DDC /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +119,23 @@
 			productReference = B1763A021965CA9B00D85DDC /* Project euler */;
 			productType = "com.apple.product-type.tool";
 		};
+		B1763A111965CC0200D85DDC /* Project Euler Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1763A181965CC0200D85DDC /* Build configuration list for PBXNativeTarget "Project Euler Test" */;
+			buildPhases = (
+				B1763A0E1965CC0200D85DDC /* Sources */,
+				B1763A0F1965CC0200D85DDC /* Frameworks */,
+				B1763A101965CC0200D85DDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Project Euler Test";
+			productName = "Project Euler Test";
+			productReference = B1763A121965CC0200D85DDC /* Project Euler Test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +146,9 @@
 				ORGANIZATIONNAME = Cenny;
 				TargetAttributes = {
 					B1763A011965CA9B00D85DDC = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					B1763A111965CC0200D85DDC = {
 						CreatedOnToolsVersion = 6.0;
 					};
 				};
@@ -109,16 +166,38 @@
 			projectRoot = "";
 			targets = (
 				B1763A011965CA9B00D85DDC /* Project euler */,
+				B1763A111965CC0200D85DDC /* Project Euler Test */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B1763A101965CC0200D85DDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B17639FE1965CA9B00D85DDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1763A061965CA9B00D85DDC /* main.swift in Sources */,
+				B18C4E4619718BCA00D40F7A /* main.swift in Sources */,
+				B1763A1D1965CC4200D85DDC /* MathMethods.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1763A0E1965CC0200D85DDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1B5E4BA1965FF0E0099D851 /* MathMethods.swift in Sources */,
+				B1654416196E8C54004836B2 /* Math_Methods_Tests.swift in Sources */,
+				B1763A171965CC0200D85DDC /* Project_Euler_Test_1-10.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +293,38 @@
 			};
 			name = Release;
 		};
+		B1763A191965CC0200D85DDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Project Euler Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B1763A1A1965CC0200D85DDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Project Euler Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -233,6 +344,16 @@
 				B1763A0B1965CA9B00D85DDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1763A181965CC0200D85DDC /* Build configuration list for PBXNativeTarget "Project Euler Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1763A191965CC0200D85DDC /* Debug */,
+				B1763A1A1965CC0200D85DDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
