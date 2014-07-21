@@ -64,4 +64,13 @@ class Math_Methods_Tests: XCTestCase {
             XCTAssert(!isPalindrome(i), "\(i) is not a palindrome but failed the test")
         }
     }
+    
+    func testEuclidFormula() {
+        
+        let resultOne = EuclidFormula(3, 2)
+        let resultTwo = EuclidFormula(6, 3)
+        
+        XCTAssertTrue( resultOne.a == 5 && resultOne.b == 12 && resultOne.c == 13)
+        XCTAssertTrue( resultTwo.a == 27 && resultTwo.b == 36 && resultTwo.c == 45)
+    }
 }
