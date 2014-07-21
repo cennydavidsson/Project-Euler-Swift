@@ -8,18 +8,6 @@
 
 import Foundation
 
-func sumOf(numbersInRange: Range<Int>, divsebelBy numbers: Int...) -> Int {
-    
-    var sum = 0
-    
-    for i in numbersInRange {
-        for n in numbers {
-            if i % n == 0 { sum += i; break }
-        }
-    }
-    return sum
-}
-
 func fibonacciSequence(top: Int) -> Array<Int> {
  
     var sequence = [0, 1]

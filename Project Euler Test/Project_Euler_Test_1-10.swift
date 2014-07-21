@@ -15,8 +15,9 @@ class Project_Euler_Test: XCTestCase {
     // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
     // The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.
     func testProblemOne() {
-        
-        let sum = sumOf(0..<1_000, divsebelBy: 3, 5)
+
+        let numbers = filter(0..<1_000) { $0 % 3 == 0 || $0 % 5 == 0 }
+        let sum = numbers.reduce(0) { $0 + $1}
         
         XCTAssertTrue(sum == 233_168)
     }
