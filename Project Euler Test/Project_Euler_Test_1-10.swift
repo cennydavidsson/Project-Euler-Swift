@@ -72,10 +72,8 @@ class Project_Euler_Test: XCTestCase {
     // What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
     func testProblemFive() {
         
-        var primeFactors:[Int] = []
         let top = 20
-        
-        for i in 2...top { if isPrimeNumber(i){ primeFactors += i }}
+        let primeFactors = filter(2...top) { isPrimeNumber($0) }
         
         let primesWithPower = primeFactors.map() { pow(Float($0), floor(log(Float(top)) / log(Float($0)))) }
         let answer = Int(primesWithPower.reduce(1) { $0 * $1 })
