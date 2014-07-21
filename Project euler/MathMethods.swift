@@ -35,6 +35,17 @@ func isPalindrome(number: Int) -> Bool {
     return numberString.reverse() == numberString
 }
 
+func EuclidFormula(m:Int, n:Int) -> (a:Int, b:Int, c:Int) {
+    
+    if m <= n { return (0, 0, 0) }
+    
+    let a = m*m - n*n
+    let b = 2*m*n
+    let c = m*m + n*n
+    
+    return (a, b, c)
+}
+
 func isPrimeNumber(number:Int) -> Bool {
     
     if number == 2 || number == 3 { return true }
