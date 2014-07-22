@@ -90,11 +90,10 @@ class Project_Euler_Test: XCTestCase {
     // Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
     func testProblemSix() {
         
-        var numbers:[Int] = []
+        let range = 1...100
         
-        for i in 1...100 { numbers += i }
-        let sumOfSquares = numbers.reduce(0) { $0 + $1 * $1 }
-        let squaresOfSums = numbers.reduce(0) { $0 + $1 }
+        let sumOfSquares = reduce(range, 0) { $0 + $1 * $1 }
+        let squaresOfSums = reduce(range, 0) { $0 + $1 }
         
         XCTAssertTrue(squaresOfSums * squaresOfSums - sumOfSquares == 25_164_150)
     }
