@@ -57,8 +57,8 @@ class Project_Euler_Test: XCTestCase {
         
         var maxPalindrome = 0
         
-        for i in 100...999 {
-            for ii in 100...i  {
+        for var i = 999; i > 100; i-- {
+            for var ii = i; ii > 100; ii--  {
                 let result = i * ii
                 if maxPalindrome < result && isPalindrome(result) { maxPalindrome = result }
             }
