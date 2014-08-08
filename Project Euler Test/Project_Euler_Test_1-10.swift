@@ -167,7 +167,10 @@ class Project_Euler_Test: XCTestCase {
     // Find the sum of all the primes below two million.
     func testProblemTen() {
         
-        let sum = reduce(2..<2_000_000, 0) { $0 + (isPrimeNumber($1) ? $1 : 0 )}
+        let oddNumbers = stride(from: 1, to: 2_000_000, by: 2)
+        
+        // added number 2 to reduce as its the only even prime number
+        let sum = reduce(oddNumbers, 2) { $0 + (isPrimeNumber($1) ? $1 : 0 )}
         
         XCTAssertTrue(sum == 142913828922)
     }
