@@ -55,19 +55,19 @@ class Project_Euler_Test: XCTestCase {
     // Find the largest palindrome made from the product of two 3-digit numbers.
     func testProblemFour() {
         
-            var maxPalindrome = 0, low = 100
-            
-            for var i = 999; i > low; i-- {
-                for var ii = i; ii > low; ii--  {
-                    let result = i * ii
-                    if maxPalindrome < result && isPalindrome(result) {
-                        maxPalindrome = result
-                        low = min(ii, i)
-                    }
+        var maxPalindrome = 0, low = 100
+        
+        for var i = 999; i > low; i-- {
+            for var ii = i; ii > low; ii--  {
+                let result = i * ii
+                if maxPalindrome < result && isPalindrome(result) {
+                    maxPalindrome = result
+                    low = min(ii, i)
                 }
             }
-            
-            XCTAssertTrue(maxPalindrome == 906_609)
+        }
+        
+        XCTAssertTrue(maxPalindrome == 906_609)
     }
     
     // Problem 5
@@ -108,12 +108,10 @@ class Project_Euler_Test: XCTestCase {
     func testProblemSeven() {
         
         var highestPrimes = 0, primeCounter = 0, i = 0
-        
         while primeCounter < 10_001 {
             if isPrimeNumber(i) { highestPrimes = i; primeCounter++ }
             i++
         }
-        
         XCTAssertTrue(highestPrimes == 104_743)
     }
     
@@ -161,6 +159,17 @@ class Project_Euler_Test: XCTestCase {
         let result = abc.a * abc.b * abc.c
         
         XCTAssertTrue(result == 31875000)
+    }
+    
+    // Problem 10
+    //
+    // The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+    // Find the sum of all the primes below two million.
+    func testProblemTen() {
+        
+        let sum = reduce(2..<2_000_000, 0) { $0 + (isPrimeNumber($1) ? $1 : 0 )}
+        
+        XCTAssertTrue(sum == 142913828922)
     }
 }
 

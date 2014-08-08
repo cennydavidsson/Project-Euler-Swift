@@ -67,7 +67,7 @@ func primeFactorize(number:Int) -> [Int] {
             while n % d != 0 { d++ }
             
             factors[i] = n / d
-            factors += d
+            factors.append(d)
         }
     }
     return factors
