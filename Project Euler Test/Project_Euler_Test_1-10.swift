@@ -41,9 +41,8 @@ class Project_Euler_Test: XCTestCase {
     // The prime factors of 13195 are 5, 7, 13 and 29.
     // What is the largest prime factor of the number 600851475143?
     func testProblemThree() {
-        
         let primes = primeFactorize(600_851_475_143)
-        let sortedPrimes = primes.sorted{ $0 > $1 }
+        let sortedPrimes = sorted(primes, >)
         
         XCTAssertTrue(sortedPrimes[0] == 6_857)
     }

@@ -47,8 +47,9 @@ func isPrimeNumber(number:Int) -> Bool {
             if number % i == 0 && (i % 2 != 0 || i % 3 != 0) { return false }
         }
         
-    } else { return false }
-    
+    } else {
+        return false
+    }
     return true
 }
 
