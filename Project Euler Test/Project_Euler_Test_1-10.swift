@@ -17,7 +17,7 @@ class Project_Euler_Test: XCTestCase {
     func testProblemOne() {
         
         let numbers = filter(0..<1_000) { $0 % 3 == 0 || $0 % 5 == 0 }
-        let sum = numbers.reduce(0) { $0 + $1}
+        let sum = numbers.reduce(0, +)
         
         XCTAssertTrue(sum == 233_168)
     }
@@ -31,7 +31,7 @@ class Project_Euler_Test: XCTestCase {
     func testProblemTwo() {
         
         let filterdArrayOfFibo = fibonacciSequence(4_000_000).filter { $0 % 2 == 0 }
-        let sumOfEvenFibo = filterdArrayOfFibo.reduce(0) {$0 + $1}
+        let sumOfEvenFibo = filterdArrayOfFibo.reduce(0, +)
         
         XCTAssertTrue(sumOfEvenFibo == 4_613_732)
     }
@@ -92,12 +92,11 @@ class Project_Euler_Test: XCTestCase {
     // Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
     func testProblemSix() {
         
-        let range = 1...100
+        let n = 100
+        let sumOfSquares = (n*(n+1)*(2*n+1))/6
+        let squaresOfSums = Int(pow(Float(reduce(1...100, 0, +)), 2))
         
-        let sumOfSquares = reduce(range, 0) { $0 + $1 * $1 }
-        let squaresOfSums = reduce(range, 0) { $0 + $1 }
-        
-        XCTAssertTrue(squaresOfSums * squaresOfSums - sumOfSquares == 25_164_150)
+        XCTAssertTrue(squaresOfSums - sumOfSquares == 25_164_150)
     }
     
     // Problem 7
