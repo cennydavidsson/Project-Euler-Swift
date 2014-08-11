@@ -11,6 +11,7 @@
 		B1763A171965CC0200D85DDC /* Project_Euler_Test_1-10.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1763A161965CC0200D85DDC /* Project_Euler_Test_1-10.swift */; };
 		B1763A1D1965CC4200D85DDC /* MathMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1763A1C1965CC4200D85DDC /* MathMethods.swift */; };
 		B18C4E4619718BCA00D40F7A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18C4E4519718BCA00D40F7A /* main.swift */; };
+		B1B25B3C199612FB004148F6 /* Project_Euler_Test_11-20.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B25B3B199612FB004148F6 /* Project_Euler_Test_11-20.swift */; };
 		B1B5E4BA1965FF0E0099D851 /* MathMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1763A1C1965CC4200D85DDC /* MathMethods.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		B1763A161965CC0200D85DDC /* Project_Euler_Test_1-10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project_Euler_Test_1-10.swift"; sourceTree = "<group>"; };
 		B1763A1C1965CC4200D85DDC /* MathMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathMethods.swift; sourceTree = "<group>"; };
 		B18C4E4519718BCA00D40F7A /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B1B25B3B199612FB004148F6 /* Project_Euler_Test_11-20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project_Euler_Test_11-20.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				B1763A161965CC0200D85DDC /* Project_Euler_Test_1-10.swift */,
+				B1B25B3B199612FB004148F6 /* Project_Euler_Test_11-20.swift */,
 				B1654415196E8C54004836B2 /* Math_Methods_Tests.swift */,
 				B1763A141965CC0200D85DDC /* Supporting Files */,
 			);
@@ -198,6 +201,7 @@
 				B1B5E4BA1965FF0E0099D851 /* MathMethods.swift in Sources */,
 				B1654416196E8C54004836B2 /* Math_Methods_Tests.swift in Sources */,
 				B1763A171965CC0200D85DDC /* Project_Euler_Test_1-10.swift in Sources */,
+				B1B25B3C199612FB004148F6 /* Project_Euler_Test_11-20.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

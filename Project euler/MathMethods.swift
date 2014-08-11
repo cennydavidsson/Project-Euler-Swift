@@ -73,3 +73,73 @@ func primeFactorize(number:Int) -> [Int] {
     }
     return factors
 }
+
+func maxSumOf(#array:[Int],withRangeLength length:Int) -> Int {
+    
+    struct FixedLengthRange {
+        init(length:Int) { self.length = length }
+        var firstValue = 0
+        let length: Int
+        var end: Int { return firstValue + length }
+        var range: Range<Int> { return firstValue..<(firstValue+length) }
+    }
+    
+    var range = FixedLengthRange(length: length)
+    var sum = 0
+    
+    while array.count >= range.end {
+        
+        sum = max(array[range.range].reduce(1) { $0 * $1 }, sum)
+        range.firstValue++
+    }
+    return sum
+}
+
+// MARK: 2D array functions
+
+func transpose2D<T>(#array:[[T]]) -> [[T]] {
+    
+    let rows = [T](count: array.count, repeatedValue: array[0][0])
+    var transposedArray = [[T]](count: array[0].count, repeatedValue: rows)
+    
+    for var i = 0; i < array.count; ++i {
+        for var j = 0; j < array[0].count; ++j {
+            transposedArray[j][i] = array[i][j]
+        }
+    }
+    return transposedArray
+}
+
+func diagonalsFrom2D<T: Equatable>(#array:[[T]], var withLength length: Int) -> [[T]] {
+    
+    var diagonalsValuesAbove: [T] = []
+    var diagonalsValuesBelow: [T] = []
+    var alldiagonals: [[T]] = []
+    
+    let loop = array.count - length
+    var j = loop
+    var i = 0
+    
+    for _ in 0...loop{
+        
+        while j < array[0].count {
+            diagonalsValuesAbove.append(array[i][j])
+            diagonalsValuesBelow.append(array[j][i])
+            ++i; ++j
+        }
+        
+        alldiagonals.append(diagonalsValuesAbove)
+        if diagonalsValuesBelow != diagonalsValuesAbove {
+            alldiagonals.append(diagonalsValuesBelow)
+        }
+        diagonalsValuesAbove = []
+        diagonalsValuesBelow = []
+        j = array.count - ++length
+        i = 0
+    }
+    return alldiagonals
+}
+
+func mirror2D<T: Comparable>(#array:[[T]]) -> [[T]] {
+    return reverse(array)
+}
