@@ -18,10 +18,16 @@
 		B130B8901999287E007B1E4B /* Problem9.swift in Sources */ = {isa = PBXBuildFile; fileRef = B130B88F1999287E007B1E4B /* Problem9.swift */; };
 		B130B892199928BD007B1E4B /* Problem10.swift in Sources */ = {isa = PBXBuildFile; fileRef = B130B891199928BD007B1E4B /* Problem10.swift */; };
 		B1654416196E8C54004836B2 /* Math_Methods_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1654415196E8C54004836B2 /* Math_Methods_Tests.swift */; };
-		B1763A1D1965CC4200D85DDC /* MathMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1763A1C1965CC4200D85DDC /* MathMethods.swift */; };
+		B1763A1D1965CC4200D85DDC /* MathFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1763A1C1965CC4200D85DDC /* MathFunctions.swift */; };
 		B18C4E4619718BCA00D40F7A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18C4E4519718BCA00D40F7A /* main.swift */; };
 		B1B25B3C199612FB004148F6 /* Problem11.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B25B3B199612FB004148F6 /* Problem11.swift */; };
-		B1B5E4BA1965FF0E0099D851 /* MathMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1763A1C1965CC4200D85DDC /* MathMethods.swift */; };
+		B1B5E4BA1965FF0E0099D851 /* MathFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1763A1C1965CC4200D85DDC /* MathFunctions.swift */; };
+		B1D4F29F199BD2B000DE4033 /* PrimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D4F29E199BD2B000DE4033 /* PrimeFunctions.swift */; };
+		B1D4F2A0199BD67A00DE4033 /* PrimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D4F29E199BD2B000DE4033 /* PrimeFunctions.swift */; };
+		B1D4F2A2199C1CCF00DE4033 /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D4F2A1199C1CCF00DE4033 /* Fibonacci.swift */; };
+		B1D4F2A3199C9D8900DE4033 /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D4F2A1199C1CCF00DE4033 /* Fibonacci.swift */; };
+		B1D4F2A5199C9DEF00DE4033 /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D4F2A4199C9DEF00DE4033 /* Array2D.swift */; };
+		B1D4F2A6199C9E2E00DE4033 /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D4F2A4199C9DEF00DE4033 /* Array2D.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,9 +57,12 @@
 		B1763A021965CA9B00D85DDC /* Project euler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Project euler"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1763A121965CC0200D85DDC /* Project Euler Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project Euler Test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1763A151965CC0200D85DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B1763A1C1965CC4200D85DDC /* MathMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathMethods.swift; sourceTree = "<group>"; };
+		B1763A1C1965CC4200D85DDC /* MathFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathFunctions.swift; sourceTree = "<group>"; };
 		B18C4E4519718BCA00D40F7A /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B1B25B3B199612FB004148F6 /* Problem11.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem11.swift; sourceTree = "<group>"; };
+		B1D4F29E199BD2B000DE4033 /* PrimeFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimeFunctions.swift; sourceTree = "<group>"; };
+		B1D4F2A1199C1CCF00DE4033 /* Fibonacci.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fibonacci.swift; sourceTree = "<group>"; };
+		B1D4F2A4199C9DEF00DE4033 /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				B18C4E4519718BCA00D40F7A /* main.swift */,
-				B1763A1C1965CC4200D85DDC /* MathMethods.swift */,
+				B1763A1C1965CC4200D85DDC /* MathFunctions.swift */,
+				B1D4F2A4199C9DEF00DE4033 /* Array2D.swift */,
+				B1D4F2A1199C1CCF00DE4033 /* Fibonacci.swift */,
+				B1D4F29E199BD2B000DE4033 /* PrimeFunctions.swift */,
 			);
 			path = "Project euler";
 			sourceTree = "<group>";
@@ -216,8 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1D4F2A2199C1CCF00DE4033 /* Fibonacci.swift in Sources */,
+				B1D4F2A5199C9DEF00DE4033 /* Array2D.swift in Sources */,
 				B18C4E4619718BCA00D40F7A /* main.swift in Sources */,
-				B1763A1D1965CC4200D85DDC /* MathMethods.swift in Sources */,
+				B1763A1D1965CC4200D85DDC /* MathFunctions.swift in Sources */,
+				B1D4F29F199BD2B000DE4033 /* PrimeFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,8 +243,9 @@
 				B130B888199927E8007B1E4B /* Problem5.swift in Sources */,
 				B130B88219992133007B1E4B /* Problem2.swift in Sources */,
 				B130B892199928BD007B1E4B /* Problem10.swift in Sources */,
-				B1B5E4BA1965FF0E0099D851 /* MathMethods.swift in Sources */,
+				B1B5E4BA1965FF0E0099D851 /* MathFunctions.swift in Sources */,
 				B130B8901999287E007B1E4B /* Problem9.swift in Sources */,
+				B1D4F2A3199C9D8900DE4033 /* Fibonacci.swift in Sources */,
 				B130B88019990D7A007B1E4B /* Problem1.swift in Sources */,
 				B130B8841999274E007B1E4B /* Problem3.swift in Sources */,
 				B1654416196E8C54004836B2 /* Math_Methods_Tests.swift in Sources */,
@@ -237,7 +253,9 @@
 				B130B88A19992801007B1E4B /* Problem6.swift in Sources */,
 				B130B88C1999283C007B1E4B /* Problem7.swift in Sources */,
 				B130B886199927BA007B1E4B /* Problem4.swift in Sources */,
+				B1D4F2A6199C9E2E00DE4033 /* Array2D.swift in Sources */,
 				B1B25B3C199612FB004148F6 /* Problem11.swift in Sources */,
+				B1D4F2A0199BD67A00DE4033 /* PrimeFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

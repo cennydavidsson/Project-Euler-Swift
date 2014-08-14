@@ -16,7 +16,7 @@ class Problem2: XCTestCase {
     // find the sum of the even-valued terms.
     func testProblem() {
         
-        let filterdArrayOfFibo = fibonacciSequence(4_000_000).filter { $0 % 2 == 0 }
+        let filterdArrayOfFibo = Fibonacci.numbers(below: 4_000_000).filter { $0 % 2 == 0 }
         let sumOfEvenFibo = filterdArrayOfFibo.reduce(0, +)
         
         XCTAssertTrue(sumOfEvenFibo == 4_613_732)

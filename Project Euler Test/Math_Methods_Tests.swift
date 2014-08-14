@@ -15,7 +15,7 @@ class Math_Methods_Tests: XCTestCase {
         
         let arrayOfFibo = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578, 5702887, 9227465, 14930352, 24157817, 39088169]
         
-        let anotherArrayOfFibo = fibonacciSequence(39090000)
+        let anotherArrayOfFibo = Fibonacci.numbers(below:39090000)
         
         XCTAssertTrue(anotherArrayOfFibo == arrayOfFibo, "Fibonacci sequance is wrong")
     }
@@ -67,5 +67,15 @@ class Math_Methods_Tests: XCTestCase {
         
         XCTAssertTrue( resultOne.a == 5 && resultOne.b == 12 && resultOne.c == 13)
         XCTAssertTrue( resultTwo.a == 27 && resultTwo.b == 36 && resultTwo.c == 45)
+    }
+    
+    func testTranspose2DArray() {
+        let array2D = [[2,4,5],
+                       [7,2,7],
+                       [1,3,8]]
+        
+        let transposed = transpose2D(array: array2D)
+        
+        XCTAssertTrue(transposed == [[2,7,1], [4,2,3],[5,7,8]])
     }
 }
