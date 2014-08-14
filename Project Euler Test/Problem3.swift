@@ -14,7 +14,7 @@ class Problem3: XCTestCase {
     // What is the largest prime factor of the number 600851475143?
     func testProblem() {
         
-        let primes = primeFactorize(600_851_475_143)
+        let primes = primeDecomposition(600_851_475_143)
         let sortedPrimes = sorted(primes, >)
         
         XCTAssertTrue(sortedPrimes[0] == 6_857)

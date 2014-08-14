@@ -27,31 +27,28 @@ func isPrimeNumber(number:Int) -> Bool {
     return true
 }
 
-func primeFactorize(number:Int) -> [Int] {
+func primeDecomposition(var number:Int) -> [Int] {
     
     if isPrimeNumber(number) || number == 1 {return [number]}
+    var factors = [Int]()
     
-    var factors:[Int] = [number]
-    
-    for i in 0..<factors.count {
-        while !isPrimeNumber(factors[i]) {
-            
-            let n = factors[i]
-            var d = 2
-            
-            while n % d != 0 { d++ }
-            
-            factors[i] = n / d
-            factors.append(d)
-        }
+    while !isPrimeNumber(number) {
+        
+        let n = number
+        var d = 2
+        
+        while n % d != 0 { d++ }
+        
+        number = n / d
+        factors += [d]
     }
-    return factors
+    return factors + [number]
 }
 
 
-func primeFactorizeWithExponent(number:Int) -> [(base: Int, exp: Int)] {
+func primeDecompositionShorthand(number:Int) -> [(base: Int, exp: Int)] {
     
-    var ints = primeFactorize(number)
+    var ints = primeDecomposition(number)
     var powers:[(base: Int, exp: Int)] = []
     
     for p in ints {
