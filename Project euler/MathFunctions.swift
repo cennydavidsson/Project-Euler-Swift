@@ -45,3 +45,15 @@ func maxSumOf(#array:[Int],withRangeLength length:Int) -> Int {
     }
     return sum
 }
+
+func factorize(num: Int) -> [Int] {
+    var factors = [1, num]
+    let t = (Int(sqrt(Double(num)))+1)
+    
+    for i in 2...t {
+        if num % i == 0 {
+            factors += [i, num/i]
+        }
+    }
+    return factors
+}
