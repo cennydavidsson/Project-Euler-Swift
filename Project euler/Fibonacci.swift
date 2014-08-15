@@ -45,7 +45,7 @@ class Fibonacci : SequenceType {
         }
     }
     
-    class func numbers(#below: Int) -> Array<Int> {
+    class func numbersBelow(below: Int) -> Array<Int> {
         
         var seq = [0, 1]
         while seq[(seq.count-1)] + seq[(seq.count-2)] <= below {
@@ -54,7 +54,9 @@ class Fibonacci : SequenceType {
         return seq
     }
     
-    class func check(#number: Int) -> Bool {
-        return true
+    class func checkNumber(number: Int) -> Bool {
+        
+        let a = Double(5*number*number)
+        return sqrt(a-4) % 1.0 == 0.0 || sqrt(a+4) % 1 == 0
     }
 }
