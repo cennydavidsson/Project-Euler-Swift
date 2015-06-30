@@ -14,12 +14,19 @@ class Problem5: XCTestCase {
     // What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
     func testProblem() {
         
-        let top = 20
-        let primeFactors = filter(2...top) { isPrimeNumber($0) }
+        let top = 20.0
+        let numbers = Array(stride(from: 0.0, through: top, by: 1.0))
+        let answer = numbers
+            .filter(isPrimeNumber)
+            .map { pow($0, floor(log(top) / log($0))) }
+            .reduce(1, *)
         
-        let primesWithPower = primeFactors.map() { pow(Float($0), floor(log(Float(top)) / log(Float($0)))) }
-        let answer = Int(primesWithPower.reduce(1) { $0 * $1 })
-        
+//        let top = 20
+//        let primeFactors = (2...top).map{Float($0)}.filter(isPrimeNumber)
+//
+//        let primesWithPower = primeFactors.map{ pow($0, floor(log(top) / log($0))) }
+//        let answer = Int(primesWithPower.reduce(1, *))
+//        
         XCTAssertTrue(answer == 232_792_560)
     }
 }
