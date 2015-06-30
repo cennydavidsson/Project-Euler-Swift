@@ -27,6 +27,10 @@ func isPrimeNumber(number:Int) -> Bool {
     return true
 }
 
+func isPrimeNumber(number:Double) -> Bool {
+    return isPrimeNumber(Int(number))
+}
+
 func primeDecomposition(var number:Int) -> [Int] {
     
     if isPrimeNumber(number) || number == 1 {return [number]}
