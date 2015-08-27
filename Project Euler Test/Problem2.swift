@@ -17,7 +17,7 @@ class Problem2: XCTestCase {
     func testProblem() {
         
         let filterdArrayOfFibo = Fibonacci.numbersBelow(4_000_000).filter { $0 % 2 == 0 }
-        let sumOfEvenFibo = filterdArrayOfFibo.reduce(0, +)
+        let sumOfEvenFibo = filterdArrayOfFibo.reduce(0, combine: +)
         
         XCTAssertTrue(sumOfEvenFibo == 4_613_732)
     }

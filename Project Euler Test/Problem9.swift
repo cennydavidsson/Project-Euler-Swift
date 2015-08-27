@@ -23,7 +23,7 @@ class Problem9: XCTestCase {
         while abcSum != abcSumGoal {
             if n > Int(sqrt(Float(abcSumGoal))) { break }
             
-            abc = EuclidFormula(m, n)
+            abc = EuclidFormula(m, n: n)
             abcSum = abc.a + abc.b + abc.c
             
             if abcSum < abcSumGoal { m++ } else { n++; m = n+1 }

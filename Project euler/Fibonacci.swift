@@ -22,7 +22,7 @@ class Fibonacci : SequenceType {
     subscript(range: Range<Int>) -> [Int] {
         get {
             var fibs: [Int] = []
-            var g = generate(from: range.startIndex)
+            let g = generate(from: range.startIndex)
             for _ in range {
                 fibs += [g.next()!]
             }
@@ -30,15 +30,15 @@ class Fibonacci : SequenceType {
         }
     }
     
-    func generate() -> GeneratorOf<Int> {
+    func generate() -> AnyGenerator<Int> {
         return self .generate(from: 0)
     }
     
-    func generate(#from:Int) -> GeneratorOf<Int> {
+    func generate(from from:Int) -> AnyGenerator<Int> {
         var current = self[from], next = self[from+1]
         
-        return GeneratorOf<Int> {
-            var ret = current
+        return anyGenerator {
+            let ret = current
             current = next
             next = next + ret
             return ret

@@ -10,8 +10,8 @@ import Foundation
 
 func isPalindrome(number: Int) -> Bool {
     
-    let numberString = Array(number.description)
-    return numberString.reverse() == numberString
+    let numberString = Array(number.description.characters)
+    return Array(numberString.reverse()) == numberString
 }
 
 func EuclidFormula(m:Int, n:Int) -> (a:Int, b:Int, c:Int) {
@@ -25,7 +25,7 @@ func EuclidFormula(m:Int, n:Int) -> (a:Int, b:Int, c:Int) {
     return (a, b, c)
 }
 
-func maxSumOf(#array:[Int],withRangeLength length:Int) -> Int {
+func maxSumOf(array array:[Int],withRangeLength length:Int) -> Int {
     
     struct FixedLengthRange {
         init(length:Int) { self.length = length }

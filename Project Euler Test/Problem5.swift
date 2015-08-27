@@ -19,14 +19,8 @@ class Problem5: XCTestCase {
         let answer = numbers
             .filter(isPrimeNumber)
             .map { pow($0, floor(log(top) / log($0))) }
-            .reduce(1, *)
-        
-//        let top = 20
-//        let primeFactors = (2...top).map{Float($0)}.filter(isPrimeNumber)
-//
-//        let primesWithPower = primeFactors.map{ pow($0, floor(log(top) / log($0))) }
-//        let answer = Int(primesWithPower.reduce(1, *))
-//        
+            .reduce(1, combine: *)
+              
         XCTAssertTrue(answer == 232_792_560)
     }
 }

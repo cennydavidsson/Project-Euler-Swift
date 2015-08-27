@@ -18,7 +18,7 @@ class Problem6: XCTestCase {
         
         let n = 100
         let sumOfSquares = (n*(n+1)*(2*n+1))/6
-        let squaresOfSums = Int(pow(Float(reduce(1...n, 0, +)), 2))
+        let squaresOfSums = Int(pow(Float((1...n).reduce(0,combine: +)), 2))
         
         XCTAssertTrue(squaresOfSums - sumOfSquares == 25_164_150)
     }

@@ -17,7 +17,7 @@ class Problem10: XCTestCase {
         let oddNumbers = stride(from: 1, to: 2_000_000, by: 2)
         
         // added number 2 to reduce as its the only even prime number
-        let sum = reduce(oddNumbers, 2) { $0 + (isPrimeNumber($1) ? $1 : 0 )}
+        let sum = oddNumbers.reduce(2) { $0 + (isPrimeNumber($1) ? $1 : 0 )}
         
         XCTAssertTrue(sum == 142913828922)
     }

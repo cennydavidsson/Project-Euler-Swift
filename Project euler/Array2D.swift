@@ -8,7 +8,7 @@
 
 import Foundation
 
-func transpose2D<T>(#array:[[T]]) -> [[T]] {
+func transpose2D<T>(array array:[[T]]) -> [[T]] {
     
     let rows = [T](count: array.count, repeatedValue: array[0][0])
     var transposedArray = [[T]](count: array[0].count, repeatedValue: rows)
@@ -21,7 +21,7 @@ func transpose2D<T>(#array:[[T]]) -> [[T]] {
     return transposedArray
 }
 
-func diagonalsFrom2D<T: Equatable>(#array:[[T]], var withLength length: Int) -> [[T]] {
+func diagonalsFrom2D<T: Equatable>(array array:[[T]], var withLength length: Int) -> [[T]] {
     
     var diagonalsValuesAbove: [T] = []
     var diagonalsValuesBelow: [T] = []
@@ -51,6 +51,6 @@ func diagonalsFrom2D<T: Equatable>(#array:[[T]], var withLength length: Int) -> 
     return alldiagonals
 }
 
-func mirror2D<T: Comparable>(#array:[[T]]) -> [[T]] {
-    return reverse(array)
+func mirror2D<T: Comparable>(array array:[[T]]) -> [[T]] {
+    return Array(array.reverse())
 }

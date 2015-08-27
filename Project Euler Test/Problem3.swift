@@ -15,7 +15,7 @@ class Problem3: XCTestCase {
     func testProblem() {
         
         let primes = primeDecomposition(600_851_475_143)
-        let sortedPrimes = primes.sorted(>) //sorted(primes, >)
+        let sortedPrimes = primes.sort(>)
         
         XCTAssertTrue(sortedPrimes[0] == 6_857)
     }

@@ -15,8 +15,8 @@ class Problem1: XCTestCase {
     
     func testProblem() {
         
-        let numbers = filter(0..<1_000) { $0 % 3 == 0 || $0 % 5 == 0 }
-        let sum = numbers.reduce(0, +)
+        let numbers = (0..<1_000).filter { $0 % 3 == 0 || $0 % 5 == 0 }
+        let sum = numbers.reduce(0, combine: +)
         
         XCTAssertTrue(sum == 233_168)
     }

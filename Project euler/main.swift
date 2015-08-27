@@ -8,4 +8,4 @@
 
 import Foundation
 
-println("Nothing to see here, move along to the tests.")
+print("Nothing to see here, move along to the tests.")

@@ -42,7 +42,7 @@ class Problem11: XCTestCase {
             diagonalsFrom2D(array: mirror2D(array: grid), withLength: 4)
         
         let sumOfValues = allValues.map { maxSumOf(array: $0, withRangeLength: 4) }
-        let sortedSums = sumOfValues.sorted(>)
+        let sortedSums = sumOfValues.sort(>)
         
         XCTAssertTrue(sortedSums[0] == 70600674)
     }
